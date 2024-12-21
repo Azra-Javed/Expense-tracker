@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gradient Text Animation</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-color: #111;
+        font-family: Arial, sans-serif;
+      }
+
+      h1 {
+        font-size: 3rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        background: linear-gradient(
+          90deg,
+          #ff0000,
+          #ff7300,
+          #ffeb00,
+          #00ff00,
+          #00c5ff,
+          #0000ff,
+          #8000ff
+        );
+        background-size: 300%;
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        animation: gradientAnimation 3s linear infinite;
+      }
+
+      @keyframes gradientAnimation {
+        0% {
+          background-position: 0% 50%;
+        }
+        100% {
+          background-position: 100% 50%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Gradient Text</h1>
+  </body>
+</html>
